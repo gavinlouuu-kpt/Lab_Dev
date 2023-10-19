@@ -32,6 +32,7 @@ void setup()
   pcf8574_27.pinMode(P5, OUTPUT);
 
   pinMode(25,OUTPUT);
+  digitalWrite(25,HIGH);
 
 	Serial.print("Init pcf8574...");
 	if (pcf8574_25.begin()){
@@ -46,10 +47,10 @@ void setup()
 	}
 
   pcf8574_27.digitalWrite(P0,LOW);
-  pcf8574_27.digitalWrite(P1,HIGH);
+  pcf8574_27.digitalWrite(P1,LOW);
   pcf8574_27.digitalWrite(P2,LOW);
   pcf8574_27.digitalWrite(P3,LOW);
-  pcf8574_27.digitalWrite(P4,HIGH);
+  pcf8574_27.digitalWrite(P4,LOW);
   pcf8574_27.digitalWrite(P5,LOW);
 
   ads1.setGain(GAIN_ONE);        // 1x gain   +/- 4.096V  1 bit = 2mV      0.125mV
@@ -121,5 +122,11 @@ void loop()
   // ------------------------------------------------------------------------------------
   // PCF8574 testing zone
   // ------------------------------------------------------------------------------------
+
+  // ------------------------------------------------------------------------------------
+  // DC-DC output test zone
+  // ------------------------------------------------------------------------------------  
+
+
 
 }
